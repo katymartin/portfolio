@@ -1,0 +1,445 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: $black;
+  &:hover {
+    cursor: default;
+  }
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: $black;
+  background: $yellow;
+}
+
+::selection {
+  color: $black;
+  background: $yellow;
+}
+
+/****************
+    Title Styles
+*****************/
+
+.home-wrap {
+  overflow: hidden;
+}
+.title,
+h1 {
+  font-family: "Black Han Sans", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1.5em;
+  margin: 6px 0px;
+  color: $black;
+  font-weight: normal;
+}
+.subtitle,
+h2 {
+  font-family: "Black Han Sans", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  margin: 6px 0px;
+  color: $black;
+}
+h3 {
+  letter-spacing: 10px;
+  font-family: "Libre Barcode 39 Extended Text", cursive;
+  font-weight: normal;
+  font-size: 30px;
+  margin: 0px;
+}
+.content {
+  font-family: "Poppins", sans-serif;
+}
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+p {
+  font-size: 0.9em;
+  hyphens: none;
+}
+/****************
+  Home Feature
+*****************/
+.single-blog {
+  .back-color {
+    display: none;
+  }
+}
+
+.back-color {
+  min-height: 550px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+.hproj-wrap {
+  @include space-between();
+  display: flex !important;
+  width: 100%;
+  .hproj-info {
+    width: 100%;
+    padding: $secPadding;
+    .skill {
+      @include space-start();
+      margin-bottom: 20px;
+      p {
+        text-transform: uppercase;
+        background-color: black;
+        letter-spacing: 2px;
+        font-size: 80%;
+        color: white;
+        padding: 2px 5px;
+        width: fit-content;
+        margin: 0px 5px 5px 0px;
+      }
+    }
+    .info-bottom {
+      @include space-between();
+      align-items: flex-end;
+      border-top: 5px solid black;
+      padding-top: 30px;
+      .tools {
+        p {
+          margin: 0px;
+        }
+      }
+    }
+    .proj-butt {
+      display: block;
+      border: 2px solid black;
+      border-radius: 50px;
+      padding: 10px 20px;
+      color: black;
+      width: fit-content;
+      @include transition(0.2s);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .hproj-img {
+    display: none;
+  }
+}
+.slider-wrap {
+  .hproj-wrap {
+    min-height: 100vh !important;
+    .hproj-info {
+      padding: 60px 40px 80px 40px;
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .single-blog {
+    .hproj-wrap {
+      max-height: 600px;
+      .hproj-img {
+        max-height: 600px;
+      }
+    }
+    .back-color {
+      max-height: 600px;
+      display: block;
+    }
+  }
+
+  .hproj-wrap {
+    min-height: 550px;
+    height: 100vh;
+    margin-bottom: -50px;
+    .hproj-info {
+      width: 60%;
+      padding: 60px 0px 0px 60px;
+    }
+    .hproj-img {
+      display: block;
+      width: 40%;
+      min-height: 550px;
+      height: 100vh;
+      -webkit-clip-path: polygon(37% 0, 100% 0, 100% 100%, 4% 100%);
+      clip-path: polygon(37% 0, 100% 0, 100% 100%, 4% 100%);
+    }
+  }
+}
+
+.slick-prev {
+  left: 15px !important;
+  z-index: 750;
+  &:before {
+    color: black !important;
+  }
+}
+.slick-next {
+  right: 15px !important;
+  z-index: 750;
+  &:before {
+    color: black !important;
+  }
+}
+
+/****************
+  Project Body
+*****************/
+.project-content {
+  @include wrapper();
+  margin-bottom: 80px;
+  .sec-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.line-head {
+  margin: 30px 0px;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-bottom: 5px solid #eee;
+}
+/****************
+  Opener
+*****************/
+.opener {
+  position: fixed;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $black;
+  z-index: 800;
+  @include transition(1s);
+  .center-text {
+    margin: 45vh auto 0 auto;
+    width: 500px;
+    h1 {
+      color: #11ffa4;
+      text-align: center;
+    }
+    .go-away {
+      color: white;
+    }
+  }
+}
+.hi {
+  top: 0 !important;
+  overflow: hidden;
+}
+.bye {
+  overflow: auto !important;
+  top: -100vh !important;
+}
+
+/****************
+  Home Blocks
+*****************/
+.project-wrapper {
+  @include wrapper();
+  margin-bottom: 80px;
+  .project-block {
+    .pblock-flex {
+      @include space-between();
+      align-items: stretch;
+      .block {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        padding: 30px;
+        overflow: hidden;
+        margin: 0px !important;
+        .block-content {
+          position: relative;
+          z-index: 100;
+          height: 100%;
+          .skill {
+            margin-bottom: 20px;
+          }
+          h1 {
+            color: black;
+            margin-bottom: 20px;
+            @include transition(0.5s);
+          }
+          .proj-butt {
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 10px 20px;
+            color: black;
+            @include transition(0.2s);
+            margin-top: 20px;
+            &:hover {
+              background-color: black !important;
+              border: 2px solid black !important;
+            }
+          }
+        }
+        .block-back {
+          @include transition(0.5s);
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          filter: grayscale(100%);
+          opacity: 0.5;
+        }
+
+        &:hover {
+          .block-content {
+            h1 {
+              color: white !important;
+              text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+            }
+            .proj-butt {
+              border: 2px solid white;
+              color: white;
+              background-color: rgba(0, 0, 0, 0.5);
+              @include transition(0.2s);
+            }
+          }
+          .block-back {
+            filter: grayscale(0%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+/****************
+      Nav
+*****************/
+
+.simple-nav {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
+  width: fit-content;
+  background-color: white !important;
+  border-bottom: 5px solid black;
+  @include space-end();
+  .n-dark {
+    background-color: black;
+    color: white;
+    &:hover {
+      background-color: black;
+      @include transition(0.5s);
+      color: #cbcbcb;
+    }
+  }
+  .navbar-item {
+    &:hover {
+      @include transition(0.5s);
+      color: #cbcbcb;
+    }
+  }
+}
+
+/****************
+  Additional Projects
+*****************/
+.simple-wrap {
+  @include wrapper();
+  .simple-flex {
+    @include space-center();
+    .simple-post {
+      width: 30%;
+      margin: 1.5%;
+      min-width: 250px;
+      @include space-between();
+      flex-wrap: nowrap;
+      align-items: center;
+      box-shadow: inset 0 0 0 0 #eee;
+      padding: 10px 20px 5px 20px;
+      &:hover {
+        box-shadow: inset 0 -100vmax 0 0 #eee;
+        @include transition(2s);
+      }
+    }
+  }
+}
+/****************
+      Footer
+*****************/
+.foot-hi {
+  bottom: 0;
+}
+.foot-bye {
+  bottom: -100vh;
+}
+.open {
+  &:after,
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f102";
+    margin: 0px 10px;
+  }
+}
+
+.close {
+  &:after,
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f103";
+    margin: 0px 10px;
+  }
+}
+
+.footer {
+  @include transition(0.8s);
+  z-index: 900;
+  position: fixed;
+  background-color: white;
+  padding: 0px;
+  height: 100vh;
+  width: 100%;
+  border-top: 5px solid black;
+  overflow: scroll;
+  .foot-toggle {
+    bottom: 0px;
+    @include transition(0.8s);
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    background-color: black;
+    text-align: center;
+    h2 {
+      color: white;
+      margin-top: 20px;
+    }
+  }
+  .foot-wrap {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 30px 30px 0px 30px;
+    height: 100vh;
+    @include space-between();
+    .foot-bio {
+      width: 100%;
+      order: 2;
+      .bio-links {
+        a {
+          h2 {
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .foot-headshot {
+      width: 100%;
+      z-index: -10;
+      order: 3;
+    }
+    .foot-contact {
+      width: 100%;
+      order: 1;
+      margin-bottom: -40px;
+    }
+  }
+}

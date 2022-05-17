@@ -1,0 +1,99 @@
+/****************
+    Title Styles
+*****************/
+
+.title,
+h1 {
+  font-size: 35px;
+  margin: 12px 0px;
+}
+.subtitle,
+h2 {
+  font-size: 20px;
+  margin: 6px 0px;
+}
+h3 {
+  font-weight: normal;
+  font-size: 30px;
+  margin: 7px 0px;
+}
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+.line-head {
+  margin: 80px 0px;
+}
+
+.single-blog {
+  .hproj-wrap {
+    @include space-between();
+    align-items: stretch;
+    .hproj-img {
+      @include space-between();
+      align-items: stretch;
+      height: 100%;
+    }
+  }
+}
+.slider-wrap {
+  .hproj-wrap {
+    overflow: hidden;
+    .hproj-img {
+      display: block;
+      height: 100vh;
+    }
+  }
+}
+
+.slider-wrap,
+.single-blog {
+  .hproj-wrap {
+    position: relative;
+    .hproj-info {
+      width: 100%;
+      max-width: 700px;
+      z-index: 20;
+      position: relative;
+    }
+    .hproj-img {
+      width: 100%;
+      margin: 0px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      display: block;
+      -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 4% 100%);
+      clip-path: polygon(45% 0, 100% 0, 100% 100%, 4% 100%);
+    }
+  }
+}
+
+/****************
+  Footer
+*****************/
+
+.contact-foot {
+  overflow: hidden;
+  .foot-wrap {
+    padding: 20vh 30px 0px 30px;
+    .foot-bio {
+      width: 50%;
+      order: 1;
+    }
+    .foot-headshot {
+      display: none;
+    }
+    .foot-contact {
+      width: 50%;
+      order: 2;
+    }
+  }
+}

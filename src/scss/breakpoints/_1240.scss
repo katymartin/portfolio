@@ -1,0 +1,28 @@
+.container {
+  max-width: 1440px;
+  width: 100%;
+}
+
+/****************
+  Footer
+*****************/
+
+.contact-foot {
+  .foot-wrap {
+    .foot-bio {
+      width: 40%;
+      order: 1;
+    }
+    .foot-headshot {
+      @include space-end;
+      order: 2;
+      width: 45%;
+      align-items: flex-end;
+      margin: 0 0 0 -15%;
+    }
+    .foot-contact {
+      width: 30%;
+      order: 3;
+    }
+  }
+}
